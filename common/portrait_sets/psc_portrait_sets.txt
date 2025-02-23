@@ -1,0 +1,11 @@
+psc_pre_aquatics = {
+	species_class = PSC_PRE_AQUATIC
+
+	portraits = {
+		"psc_pre_aqu5"
+	}
+
+	uplifted_portraits = {
+		"aqu5"
+	}
+}

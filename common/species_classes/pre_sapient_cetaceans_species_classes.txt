@@ -1,0 +1,10 @@
+PSC_PRE_AQUATIC = {
+	archetype = PRESAPIENT
+
+	playable = { always = no }
+	randomized = no
+
+	graphical_culture = aquatic_01
+	move_pop_sound_effect = "molluscoid_pops_move"
+	uplifted_into = "AQUATIC"
+}

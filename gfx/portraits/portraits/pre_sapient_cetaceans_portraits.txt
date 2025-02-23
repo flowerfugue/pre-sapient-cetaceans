@@ -1,0 +1,8 @@
+portraits = {
+	psc_pre_aqu5 = {
+		entity = "portrait_aquatic_05_entity"
+		clothes_selector = "no_texture"
+		hair_selector = "no_texture"
+		greeting_sound = "aqu_portrait_05"
+	}
+}
