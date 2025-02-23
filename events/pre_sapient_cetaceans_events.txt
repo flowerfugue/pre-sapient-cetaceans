@@ -3,52 +3,55 @@ namespace = pre_sapient_cetaceans
 event = {
 	id = pre_sapient_cetaceans.1
 	hide_window = yes
+	fire_only_once = yes
 	is_triggered_only = yes
 
+	trigger = {
+		any_system = {
+			has_star_flag = sol
+		}
+	}
+
 	immediate = {
-		every_system = {
-			if = {
-				limit = {
-					has_star_flag  = sol
-				}
-				every_system_planet = {
-					if = {
-						limit = {
-							has_planet_flag = planet_earth
-							has_climate = wet
-							NOT = {
-								has_planet_flag = nuked_earth
-							}
+		random_system = {
+			limit = { has_star_flag = sol }
+			every_system_planet = {
+				if = {
+					limit = {
+						has_planet_flag = planet_earth
+						has_climate = wet
+						NOT = {
+							has_planet_flag = nuked_earth
 						}
-						create_species = {
-							name = PSC_Cetacean
-							plural = PSC_Cetacean_plural
-							adjective = PSC_Cetacean_adj
-							class = "PSC_PRE_AQUATIC"
-							portrait = "psc_pre_aqu5"
-							homeworld = THIS
-							name_list = "AQUATIC1"
-							traits = {
-								trait = "trait_aquatic"
-								trait = "trait_presapient_natural_intellectuals"
-							}
-							sapient = no
-							is_mod = no
-							immortal = no
-							effect = {
-								save_event_target_as = cetacean_species
-							}
+					}
+					create_species = {
+						name = PSC_Cetacean
+						plural = PSC_Cetacean_plural
+						adjective = PSC_Cetacean_adj
+						class = "PSC_PRE_AQUATIC"
+						portrait = "psc_pre_aqu5"
+						homeworld = THIS
+						name_list = "AQUATIC1"
+						traits = {
+							trait = "trait_aquatic"
+							trait = "trait_presapient_natural_intellectuals"
 						}
-						while = {
-							count = 3
-							create_pop = {
-								species = event_target:cetacean_species
-							}
-							modify_species = {
-								species = event_target:cetacean_species
-								base = none
-								ideal_planet_class = "pc_ocean"
-							}
+						sapient = no
+						is_mod = no
+						immortal = no
+						effect = {
+							save_event_target_as = cetacean_species
+						}
+					}
+					while = {
+						count = 3
+						create_pop = {
+							species = event_target:cetacean_species
+						}
+						modify_species = {
+							species = event_target:cetacean_species
+							base = none
+							ideal_planet_class = "pc_ocean"
 						}
 					}
 				}
