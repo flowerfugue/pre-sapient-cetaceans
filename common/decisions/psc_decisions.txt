@@ -1,0 +1,19 @@
+decision_psc_study_intelligent_life = {
+	owned_planets_only = yes
+	potential = {
+		has_planet_flag = planet_earth
+		has_climate = wet
+		NOT = {
+		    has_planet_flag = nuked_earth
+        	    has_planet_flag = psc_cetaceans_added
+		}
+	}
+	effect = {
+		custom_tooltip = decision_study_intelligent_life_effects_short
+		hidden_effect = {
+			events = {
+		        	pre_sapient_cetaceans.1
+	        	}
+		}
+	}
+}
