@@ -22,7 +22,6 @@ event = {
 						has_climate = wet
 						NOT = {
 							has_planet_flag = nuked_earth
-                            has_planet_flag = psc_cetaceans_added
 						}
 					}
 					create_species = {
